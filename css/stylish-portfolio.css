@@ -162,6 +162,16 @@ hr.small {
     -o-background-size: cover;
 }
 
+/* Video */
+.video-bg video {
+    width: 100%;
+}
+
+.video-text-overlay {
+    position: absolute;
+    top: 0;
+}
+
 /* About */
 
 .about {
