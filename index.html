@@ -37,6 +37,10 @@
             width: 100%;
         }
 
+        .video-bg #myVideoMobile {
+          display: none;
+        }
+
         .video-text-overlay {
             position: absolute;
             top: 20%;
@@ -111,6 +115,45 @@
           text-shadow: 2px 2px 5px #c4c4c4;
         }
 
+        @media (max-width: 578px) {
+          .video-bg video {
+            height: 720px;
+          }
+          .video-bg #myVideo {
+            display: none;
+          }
+          .video-bg #myVideoMobile {
+            display: block;
+          }
+          .video-text-overlay {
+            top: 0;
+          }
+          .video-text-overlay h1 {
+            font-size: 40.2px;
+          }
+          .video-text-overlay p {
+            font-size: 18.2px;
+          }
+          .video-text-overlay .row .col-lg-6.section-links {
+            padding-top: 5%;
+            margin-bottom: 30px;
+          }
+          .video-text-overlay a.links {
+            font-size: 14.1px;
+          }
+
+          .video-text-overlay .row .col-lg-6.section-img img {
+            width: 54%;
+          }
+          .video-text-overlay figcaption {
+            font-size: 13.2px;
+          }
+          .video-text-overlay figcaption::before {
+            width: 55%;
+            height: 300px;
+            left: 8px;
+          }
+        }
     </style>
   
   </head>
@@ -122,22 +165,22 @@
   <ul class="sidebar-nav">
       <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
       <li class="sidebar-brand">
-      <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+      <a href="#top">Start Bootstrap</a>
       </li>
       <li>
-      <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+      <a href="#top">Home</a>
       </li>
       <li>
-      <a href="#about" onclick = $("#menu-close").click(); >About</a>
+      <a href="#about">About</a>
       </li>
       <li>
-      <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+      <a href="#services">Services</a>
       </li>
       <li>
-      <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+      <a href="#portfolio">Portfolio</a>
       </li>
       <li>
-      <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+      <a href="#contact">Contact</a>
       </li>
   </ul>
 </nav>
@@ -155,6 +198,10 @@
   <div class="video-bg">
     <video autoplay muted loop id="myVideo">
       <source src="img/Nino Tabao Tattoo Video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <video autoplay muted loop id="myVideoMobile">
+      <source src="img/Nino Tabao Tattoo Video Vertical.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
   </div>
