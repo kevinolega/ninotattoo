@@ -162,16 +162,6 @@ hr.small {
     -o-background-size: cover;
 }
 
-/* Video */
-.video-bg video {
-    width: 100%;
-}
-
-.video-text-overlay {
-    position: absolute;
-    top: 0;
-}
-
 /* About */
 
 .about {
@@ -252,3 +242,126 @@ hr.small {
 footer {
     padding: 100px 0;
 }
+
+/* Custom CSS */
+    .video-bg video {
+        width: 100%;
+    }
+
+    .video-bg #myVideoMobile {
+      display: none;
+    }
+
+    .video-text-overlay {
+        position: absolute;
+        top: 20%;
+        width: 100%;
+    }
+
+    .video-text-overlay h1 {
+      color: #ffffff;
+      font-family: "Libre Franklin", sans-serif;
+      font-weight: bold;
+      font-size: 71.2px;
+      margin-bottom: 0;
+      text-shadow: 2px 2px 5px #c4c4c4;
+    }
+
+    .video-text-overlay p {
+      color: #ffffff;
+      font-family: "Libre Franklin", sans-serif;
+      font-weight: 500;
+      font-size: 31.2px;
+      margin-bottom: 0;
+      text-shadow: 2px 2px 5px #c4c4c4;
+    }
+
+    .video-text-overlay figcaption {
+      color: #ffffff;
+      font-family: "Libre Franklin", sans-serif;
+      font-weight: 500;
+      font-size: 20.2px;
+      margin-bottom: 0;
+      text-shadow: 2px 2px 5px #c4c4c4;
+    }
+
+    .video-text-overlay figcaption::before {
+      content: "";
+      border: 1px solid #ffffff;
+      width: 71%;
+      height: 500px;
+      display: block;
+      position: absolute;
+      top: 10%;
+      left: -8px;
+      z-index: 1;
+    }
+
+    .video-text-overlay .row .col-lg-6 {
+      flex-direction: column;
+      display: flex;
+      padding: 0px 16px;
+    }
+
+    .video-text-overlay .row .col-lg-6.section-links {
+      padding-top: 10%;
+    }
+
+    .video-text-overlay .row .col-lg-6.section-img {
+      align-items: end;
+    }
+
+    .video-text-overlay .row .col-lg-6.section-img img {
+      width: 65%;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .video-text-overlay a.links {
+      color: #ffffff;
+      font-family: "Libre Franklin", sans-serif;
+      font-weight: bold;
+      font-size: 18.1px;
+      margin-bottom: 0;
+      text-shadow: 2px 2px 5px #c4c4c4;
+    }
+
+    @media (max-width: 578px) {
+      .video-bg video {
+        height: 720px;
+      }
+      .video-bg #myVideo {
+        display: none;
+      }
+      .video-bg #myVideoMobile {
+        display: block;
+      }
+      .video-text-overlay {
+        top: 0;
+      }
+      .video-text-overlay h1 {
+        font-size: 40.2px;
+      }
+      .video-text-overlay p {
+        font-size: 18.2px;
+      }
+      .video-text-overlay .row .col-lg-6.section-links {
+        padding-top: 5%;
+        margin-bottom: 30px;
+      }
+      .video-text-overlay a.links {
+        font-size: 14.1px;
+      }
+
+      .video-text-overlay .row .col-lg-6.section-img img {
+        width: 54%;
+      }
+      .video-text-overlay figcaption {
+        font-size: 13.2px;
+      }
+      .video-text-overlay figcaption::before {
+        width: 55%;
+        height: 300px;
+        left: 8px;
+      }
+    }
